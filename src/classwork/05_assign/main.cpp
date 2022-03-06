@@ -3,6 +3,7 @@
 #include<iostream>
 #include "sequence.h"
 
+
 //write using statements for cin cout
 
 
@@ -18,7 +19,30 @@ give you a valid name.
 
 int main()
 {
+   int choice;
+   char user_confirm;
 
+    do 
+	{
+		// output menu 
+		display_menu();
+		// take user's choice and run through options
+		choice = run_menu();
+        // if user does not want to exit continue...
+		if (choice != 3)
+		{
+            user_menu_options(choice);
+		}
+		else 
+		{    // if user wants exit ask if sure if 'y' exit...
+			user_confirm = user_confirm_option();
+			if (user_confirm == 'y')
+			{
+				cout << "Exiting program...";
+			}
+		}
+	}while(user_confirm != 'y');
 	return 0;
+	
 }
 

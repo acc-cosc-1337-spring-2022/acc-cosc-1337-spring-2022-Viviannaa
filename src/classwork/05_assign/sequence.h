@@ -1,4 +1,31 @@
 //write include statements for string and vector
+#include <iostream>
+#include <string>
+
+
+using std::cout; using std::cin; using std::string;
+
+
+double get_gc_content(const string& dna);
+
+// reverse the string 
+std::string reverse_string(std::string dna);
+
+// complete the dna function 
+std::string get_dna_completment(string dna);
+
+// user menu
+void display_menu();
+
+// prototype for run user menu
+int run_menu();
+
+
+// menu options
+void user_menu_options (int choice);
+
+// confirm user's choice
+char user_confirm_option();
 
 
 /*
